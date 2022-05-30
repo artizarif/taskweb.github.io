@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: .4s linear;
+    font-family: 'Cuprum', sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+
+:root{
+    --box-shadow: 0 .1rem .1rem 0 rgba(186, 183, 183, 0.1);
+    --lg-black: #999;
+    --lg-white: #eee;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+/* media quries */
+
+@media(max-width: 441px){
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem 1rem ;
+        box-shadow: 0 .1rem .1rem 0;
+        background: none;
+    }
+
+    .navbar .fa-arrow-left{
+        font-size: 1.2rem;
+        color: var(--lg-black);
+    }
+
+    .navbar .fa-heart{
+        font-size: 1.3rem;
+        color: rgb(99, 140, 300);
+    }
+
+    .navbar .title{
+        text-align: left;
+        width: 80%;
+    }
+
+    .navbar .title p{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .navbar .title span{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .wrapper .city, .wrapper .room-guest{
+        width: 100%;
+        background: var(--lg-white);
+        display: flex;
+        align-items: center;
+        padding: .3rem .8rem;
+        border-radius: .1rem;
+        border: 1px solid var(--lg-black);
+    }
+
+    .wrapper .city .fa-location-dot, .room-guest .fa-user{
+        font-size: 1.5rem;
+        padding-right: .6rem;
+        color: var(--lg-black);
+    }
+
+    .wrapper .city .heading, .room-guest .heading{
+        font-size: .66rem;
+        color: var(--lg-black);
+        font-weight: 5 00;
+    }
+
+    .wrapper .city .bold, .room-guest .bold{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .wrapper .city .span, .room-guest .span{
+        color: #222;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .wrapper .box{
+        display: flex;
+        padding: .3rem 1rem;
+        gap: .5rem;
+        width: 100vw;
+    }
+
+    .wrapper .in-date, .wrapper .out-date{
+        background: var(--lg-white);
+        border: 1px solid var(--lg-black);
+        border-radius: .1rem;
+        display: flex;
+        align-items: center;
+        padding: .8rem .8rem 0rem .8rem;
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        width: 49%;
+    }
+
+    .wrapper .in-date i{
+        font-size: 1.5rem;
+        padding-right: .3rem;
+        color: var(--lg-black);
+        text-align: left;
+        padding-bottom: .5rem;
+    }
+
+    .wrapper .in-date .wrap, .wrapper .out-date .wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* padding-top: .5rem; */
+    }
+
+    .wrapper .in-date .wrap .heading, .wrapper .out-date .wrap .heading{
+        font-size: .7rem;
+        color: var(--lg-black);
+        padding-bottom: .2rem;
+        width: 90%;
+    }
+
+    .wrapper .in-date .flex, .wrapper .out-date .flex{
+        display: flex;
+        /* flex-direction: column; */
+        /* display: inline-block; */
+        align-items: center;
+        height: 100%;
+        /* padding-right: 1rem; */
+        width: 90%;
+    }
+
+    .wrapper .in-date .wrap .flex .bold, .wrapper .out-date .wrap .flex .bold{
+        font-size: .8rem;
+        /* margin-left: .1rem; */
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .wrapper .in-date .wrap .flex .span,  .wrapper .out-date .wrap .flex .span{
+        /* color: var(--lg-black); */
+        font-size: .7rem;
+        padding-left: .3rem;
+        padding-top: .1rem;
+    }
+
+    .wrapper .btn{
+        width: 100%;
+        background: rgb(99, 140, 300);
+        margin-top: 1rem;
+        padding: .8rem;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        border-radius: .3rem;
+    }
+
+    /* content section starts */
+
+    .box{
+        width: 100vw;
+        padding: .8rem;
+    }
+    .box .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: .8rem;
+    }
+    .box .wrap h3{
+        color: rgba(134, 44, 164, 0.815);
+        font-size: 1.1rem;
+        font-weight: 1000;
+    }
+    .box .wrap a{
+        color: rgba(134, 44, 164, 0.815);
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .box .wrapper .slide{
+        width: 100%;
+        height: 13rem;
+        border-radius: .4rem;
+        box-shadow: 0 .1rem .2rem 0 #666;
+    }
+    .box .card-slider .slide .image{
+        width: 100%;
+        height: 80%;
+        background: url(images/img-2.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: .4rem .4rem 0 0;
+    }
+
+    .box .slide .image span{
+        padding: .3rem .4rem .2rem .4rem;
+        background: #fff;
+        border-radius: 1rem;
+        float: right;
+        margin-top: .5rem;
+        margin-right: .5rem;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    .box .slide .image .wrap{
+        display: flex;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        padding-top: 28%;
+    }
+
+    .box .slide .image .wrap h3{
+        color: #fff;
+        font-size: 1.9rem;
+        border-right: 1px solid #fff;
+        width: 50%;
+        font-weight: 800;
+    }
+    .box .slide .image .wrap p{
+        color: #fff;
+        font-size: 1rem;
+        background: none;
+        font-weight: 600;
+        width: 48%;
+        text-align: left;
+    }
+
+    .box .slide .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        text-align: center;
+    }
+    .box .slide .wrap p{
+        padding: .3rem .8rem;
+        text-align: center;
+        background: rgb(135, 12, 12);
+        border-radius: 1.5rem;
+        font-size: .8rem;
+        color: #fff;
+    }
+    .box .slide .wrap span{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .box .slide .wrap a{
+        color: rgb(46, 46, 148);
+    }
+
+    /* css for page 2 */
+
+    .navbar-2{
+        margin: .8rem .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    .navbar-2 .fa-arrow-left{
+        font-size: 1.2rem;
+        padding-right: .5rem;
+        color: var(--lg-black);
+    }
+
+    .navbar-2 .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: .8rem; */
+        background: var(--lg-white);
+        /* color: var(--lg-black); */
+        border: 1px solid var(--lg-black);
+        border-radius: .2rem;
+        padding: .2rem .5rem;
+        width: 80%;
+    }
+
+    .navbar-2 .wrap .wrap-2{
+        width: 100%;
+    }
+
+    .navbar-2 .wrap .wrap-2 h4{
+        color: black;
+        padding-bottom: .1rem;
+    }
+
+    .navbar-2 .wrap .wrap-2 input{
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding-right: .3rem;
+    }
+
+    .navbar-2 .wrap .edit i{
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+        color: rgb(0, 140, 255);
+    }
+
+    .navbar-2 .search{
+        margin-left: .8rem;
+    }
+    .navbar-2 .map{
+        margin-left: .3rem;
+    }
+
+    .navbar-2 .search i, .navbar-2 .map i{
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+        color: rgb(0, 140, 255);
+    }
+    .navbar-2 .search p, .navbar-2 .map p, .navbar-2 .wrap .edit p{
+        color: rgb(0, 140, 255);
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    .title-2{
+        width: 100vw;
+        padding: .8rem 1.5rem;
+        text-align: left;
+        background: var(--lg-white);
+        border: 1px solid var(--lg-black);
+    }
+    .title-2 h3{
+        font-size: 1.5rem;
+    }
+
+    /* css for page section starts */
+
+    .page{
+        width: 100vw;
+        background: var(--lg-white);
+    }
+
+    .page .card{
+        padding: .8rem;
+        background: #fff;
+        width: 100%;
+        border: 1px solid var(--lg-black);
+        margin-bottom: 1.2rem;
+    }
+
+    .page .card .image img{
+        width: 100%;
+        border-radius: .2rem;
+        height: 12rem;
+        margin-bottom: .6rem;
+    }
+
+    .page .card .content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page .card .content .con-1{
+        width: 70%;
+    }
+    .page .card .content .con-1 h3{
+        font-size: 1.2rem;
+        padding-bottom: .3rem;
+    }
+
+    .page .card .content .con-1 p{
+        font-size: .8rem;
+        /* width: 90%; */
+        color: var(--lg-black);
+        padding-bottom: .5rem;
+    }
+
+    .page .card .content .con-1 span{
+        display: block;
+        background: rgba(135, 207, 235, 0.416);
+        width: 4rem;
+        font-size: .8rem;
+        font-weight: 600;
+        color: blue;
+        padding: .2rem;
+        border-left: 3px solid blue;
+        border-radius: 0rem .3rem .3rem 0;
+        margin-bottom: .5rem;
+    }
+
+    .page .card .content .con-1 i{
+        color: rgb(92, 32, 32);
+        font-size: .8rem;
+        font-style: normal;
+    }
+
+    .page .card .content .con-2{
+        text-align: right;
+        padding-top: 1.5rem;
+    }
+
+    .page .card .content .con-2 span{
+        font-size: .7rem;
+        font-weight: 600;
+        color: var(--lg-black);
+    }
+
+    .page .card .content .con-2 h4{
+        font-size: 1.3rem;
+        font-weight: 1000;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+    }
+
+    .page .card .content .con-2 p{
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    .page .card .content .con-2 .fade{
+        display: block;
+        color: var(--lg-black);
+        font-weight: 300;
+    }
+
+    .page .card .offer{
+        background: rgba(0, 128, 87, 0.368);
+        padding: .5rem 1rem;
+        text-align: left;
+        font-size: .7rem;
+        border-radius: 1rem;
+        margin-top: .5rem;
+    }
+
+    /* css for page section ends here */
+
+}
+
